@@ -15,3 +15,7 @@ A socket productinon
 -   `docker ps`: Lists running containers.
 -   `docker images` : Lists locally stored Docker images.
 -   docker image rm <image_id>  : Delete a Image
+
+### Git 
+-   Only 2 file in git
+    `git ls-files --stage | grep -vE '(server\.py|helper/)' | xargs git restore --staged`
