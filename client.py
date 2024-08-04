@@ -13,7 +13,7 @@ def receive_messages(client_socket):
 
 def main():
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client.connect(('127.0.0.1', 9999))
+    client.connect(('192.168.0.103', 9999))
     
     username = input("Enter your username: ")
     client.send(username.encode('utf-8'))

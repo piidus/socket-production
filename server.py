@@ -3,7 +3,8 @@ import threading
 import time
 import json
 import os
-from log_settings import log
+from helper.log_settings import log
+
 clients = {}
 clients_last_activity = {}
 
@@ -40,7 +41,7 @@ def handle_client(client_socket, client_address):
 
         while True:
             try:
-                client_socket.settimeout(60)  # Set a timeout for inactivity
+                client_socket.settimeout(120)  # Set a timeout for inactivity
                 message = client_socket.recv(1024).decode('utf-8')
                 if not message:
                     break
